@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class DatabaseConnectionFactory {
 	
-	private static String dbURL="jdbc:mysql://127.0.0.1:3306/details";
-	private static String dbUser="root";;
-	private static String dbPassword="suman";
+	private static String dbURL="jdbc:postgresql://"  + "ec2-54-246-115-40.eu-west-1.compute.amazonaws.com" + "/d6oqjkethnahou?sslmode=require";;
+	private static String dbUser="jtbpoiomkkcmlk";;
+	private static String dbPassword="f341fae1a367c94ffa4e3a4765ce078f5372d97e8dba965ffe7cffd17a47733c";
 	
 	public static Connection createConnection()
 	{
@@ -16,7 +16,7 @@ public class DatabaseConnectionFactory {
 		try{
 			try {
 				System.out.println("hi");
-				Class.forName("com.mysql.jdbc.Driver");
+				Class.forName("org.postgresql.Driver");
 				}
 				catch(Exception  e) {
 				   System.out.println(e);
