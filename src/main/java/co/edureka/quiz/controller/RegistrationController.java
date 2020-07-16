@@ -39,7 +39,7 @@ public class RegistrationController extends HttpServlet {
 
 		try {
 			Statement st = con.createStatement();
-			String sql = "INSERT INTO users values ('" + username + "','" + password + "','" + email + "')";
+			String sql = "INSERT INTO emp values ('" + username + "','" + password + "','" + email + "')";
 			System.out.println(sql);
 			st.executeUpdate(sql);
 		} catch (SQLException sqe) {

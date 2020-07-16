@@ -45,7 +45,7 @@ public class LoginController extends HttpServlet {
 		int i = 0;
 		try {
 			Statement st = con.createStatement();
-			String sql = "Select * from  users where username='" + username + "' and password='" + password + "' ";
+			String sql = "Select * from  emp where username='" + username + "' and password='" + password + "' ";
 			System.out.println(sql);
 			set = st.executeQuery(sql);
 			while (set.next()) {
