@@ -50,7 +50,7 @@ body {
 
 </style>
   
-   <title>TechQ Online Quiz</title>
+ 
 </head>
 <body>
 
@@ -59,10 +59,7 @@ body {
    <li class=''><a href='${pageContext.request.contextPath}'><span>Home</span></a></li>
    <li><a href='${pageContext.request.contextPath}/login'><span>Login</span></a></li>
    <li><a href='${pageContext.request.contextPath}/register'><span>Register</span></a></li>
-   <li class='#'><a href='#'><span>Submit a Question</span></a></li>
-   <li class='#'><a href='#'><span>Feedback</span></a></li>
-   <li><a href='#'><span>Contribute</span></a></li>
-   <li><a href='#'><span>Contact us</span></a></li>
+
 </ul>
 </div>
 
@@ -78,25 +75,7 @@ Logged as <a href="#" class="button username">${sessionScope.user}</a>
 
 </c:if>
 
-<div style="position:absolute;left:120px;top:60px">
-<table cellpadding="0" cellspacing="50">
 
-<tr>
-<td><a href="takeExam?test=java"><img height="200" width="200" src="${pageContext.request.contextPath}/images/java.png"/></a></td>
-<td><a href="takeExam?test=javascript"><img height="200" width="200" src="${pageContext.request.contextPath}/images/javascript.png"/></a></td>
-<td><a href="takeExam?test=sql"><img height="200" width="200" src="${pageContext.request.contextPath}/images/sql-logo.png"/></a></td>
-<td><a href="takeExam?test=python"><img height="200" width="200" src="${pageContext.request.contextPath}/images/python.jpg"/></a></td>
-</tr>
-
-<tr>
-<td><a href="takeExam?test=css"><img height="200" width="200" src="${pageContext.request.contextPath}/images/css.jpg"/></a></td>
-<td><a href="takeExam?test=php"><img height="200" width="200" src="${pageContext.request.contextPath}/images/php-logo.jpg"/></a></td>
-<td><a href="takeExam?test=linux"><img height="200" width="200" src="${pageContext.request.contextPath}/images/logo-linux.png"/></a></td>
-<td><a href="takeExam?test=mongodb"><img height="200" width="200" src="${pageContext.request.contextPath}/images/mongodb_logo.png"/></a></td>
-</tr>
-
-</table>
-</div>
 
 
 </body>

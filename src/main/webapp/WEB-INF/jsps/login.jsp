@@ -14,7 +14,7 @@ body {
 	background: url("${pageContext.request.contextPath}/images/background.jpg");
 }
 .user-icon {
-	top:153px; /* Positioning fix for slide-in, got lazy to think up of simpler method. */
+	top:153px; 
 	background: rgba(65,72,72,0.75) url('${pageContext.request.contextPath}/images/user-icon.png') no-repeat center;	
 }
 
@@ -33,10 +33,7 @@ body {
    <li class=''><a href='${pageContext.request.contextPath}'><span>Home</span></a></li>
    <li><a href='${pageContext.request.contextPath}/login'><span>Login</span></a></li>
    <li><a href='${pageContext.request.contextPath}/register'><span>Register</span></a></li>
-   <li class='#'><a href='#'><span>Submit a Question</span></a></li>
-    <li class=''><a href='#'><span>Feedback</span></a></li>
-   <li><a href='#'><span>Contribute</span></a></li>
-   <li><a href='#'><span>Contact us</span></a></li>
+
 </ul>
 </div>
 
@@ -55,7 +52,7 @@ Don`t have an account, click here to <a href='${pageContext.request.contextPath}
 		</div>
 	
 		<div class="content">
-		<input name="username" type="text" class="input username" placeholder="Username" />
+		<input name="email" type="text" class="input username" placeholder="email" />
 		<div class="user-icon"></div>
 		<input name="password" type="password" class="input password" placeholder="Password" />
 		<div class="pass-icon"></div>		

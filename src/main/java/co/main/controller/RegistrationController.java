@@ -1,4 +1,4 @@
-package co.edureka.quiz.controller;
+package co.main.controller;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import co.edureka.quiz.DatabaseConnectionFactory;
+import co.main.DatabaseConnectionFactory;
 
 /**
  * Servlet implementation class RegistrationController
@@ -39,11 +39,12 @@ public class RegistrationController extends HttpServlet {
 
 		try {
 			Statement st = con.createStatement();
-			String sql = "INSERT INTO emp values ('" + username + "','" + password + "','" + email + "')";
+			 username =username.replace("'","''");
+			String sql = "INSERT INTO users values ('" + username + "','" + email + "','" + password  + "')";
 			System.out.println(sql);
 			st.executeUpdate(sql);
 		} catch (SQLException sqe) {
-			System.out.println("Error : While Inserting record in database");
+			System.out.println(sqe);
 		}
 		try {
 			con.close();

@@ -1,4 +1,4 @@
-package co.edureka.quiz.controller;
+package co.main.controller;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -14,7 +14,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import co.edureka.quiz.DatabaseConnectionFactory;
+import co.main.DatabaseConnectionFactory;
+
+
 
 /**
  * Servlet implementation class LoginController
@@ -38,14 +40,14 @@ public class LoginController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String username = request.getParameter("username");
+		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		Connection con = DatabaseConnectionFactory.createConnection();
 		ResultSet set = null;
 		int i = 0;
 		try {
 			Statement st = con.createStatement();
-			String sql = "Select * from  emp where username='" + username + "' and password='" + password + "' ";
+			String sql = "Select * from  users where email='" + email + "' and password='" + password + "' ";
 			System.out.println(sql);
 			set = st.executeQuery(sql);
 			while (set.next()) {
@@ -54,7 +56,7 @@ public class LoginController extends HttpServlet {
 
 			if (i != 0) {
 				HttpSession session = request.getSession();
-				session.setAttribute("user", username);
+				session.setAttribute("user", email);
 				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsps/home.jsp");
 				rd.forward(request, response);
 

@@ -1,4 +1,4 @@
-package co.edureka.quiz;
+package co.main;
 
 import java.io.File;
 import java.io.FileNotFoundException;
